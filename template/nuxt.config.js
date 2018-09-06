@@ -57,6 +57,7 @@ module.exports = {
     ]
   },
   plugins: [
-    { src: '~/plugins/analytics.js', ssr: false }
+    { src: '~/plugins/analytics.js', ssr: false },
+    { src: '~/plugins/hash-link-fix.js', ssr: false }
   ]
 }
