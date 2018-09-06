@@ -1,0 +1,52 @@
+/// Buttons
+
+// Button > Default
+.btn {
+  // TODO: update style
+  display: inline-block;
+  padding: $gutter/2 $gutter*4 ($gutter/2 + 2);
+  overflow: hidden;
+  background: $brand-color;
+  border: none;
+  border-radius: $default-border-radius;
+  color: $white;
+  cursor: pointer;
+  font-size:  $font-size-2;
+  font-weight: $bold-font-weight;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+    -moz-user-select:    none;
+    -webkit-user-select: none;
+  user-select:           none;
+  -webkit-appearance: none;
+}
+.btn:hover,
+.btn:focus {
+  background: $brand-dark-color;
+  border: none;
+}
+button.btn {
+  vertical-align: top;
+}
+.btn::-moz-focus-inner {
+  outline: none;
+  border: 0;
+}
+
+// Buttons > Block
+.btn.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Buttons > Disabled
+.btn:disabled,
+.btn[disabled],
+.btn:disabled:hover,
+.btn[disabled]:hover,
+.btn:disabled:focus,
+.btn[disabled]:focus {
+  background: $grey-light-color;
+  cursor: default;
+}
