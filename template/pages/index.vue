@@ -64,5 +64,20 @@
 </template>
 
 <script>
-  // TODO
+import config from '~/config'
+import { createMetaTags } from '~/assets/js/helpers'
+
+export default {
+  head() {
+    return {
+      title: config.sharing.title,
+      meta: createMetaTags({
+        title: config.sharing.title,
+        description: config.sharing.description,
+        image: config.sharing.image,
+        url: config.sharing.url
+      })
+    }
+  }
+}
 </script>

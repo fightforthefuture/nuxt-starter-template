@@ -1,0 +1,10 @@
+{
+  "sharing": {
+    "title": "TODO: title",
+    "description": "TODO: description",
+    "image": "https://www.EXAMPLE.com/share.jpg",
+    "defaultTweetText": "TODO: tweet text",
+    "url": "https://www.EXAMPLE.com"
+  },
+  "googleAnalyticsId": "UA-XXXXXXXXX-X"
+}
