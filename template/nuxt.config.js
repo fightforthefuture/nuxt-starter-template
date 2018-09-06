@@ -55,5 +55,8 @@ module.exports = {
         }
       ]
     ]
-  }
+  },
+  plugins: [
+    { src: '~/plugins/analytics.js', ssr: false }
+  ]
 }

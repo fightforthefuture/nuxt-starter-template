@@ -12,7 +12,7 @@ export function createMetaTags(tags={}) {
     'author': 'Fight for the Future',
     'og:description': tags.description,
     'og:image': tags.image,
-    'og:site_name': 'Drop Salesforce',
+    'og:site_name': 'TODO: site name',
     'og:title': tags.title,
     'og:type': 'website',
     'og:url': tags.url,
