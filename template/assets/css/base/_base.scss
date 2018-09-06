@@ -1,0 +1,10 @@
+/// Base
+
+html,
+body {
+  background: $background-color;
+  color: $text-color;
+}
+body {
+  font-size: $base-font-size;
+}

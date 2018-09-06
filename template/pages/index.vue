@@ -1,65 +1,51 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        {{ name }}
-      </h1>
-      <h2 class="subtitle">
-        {{ description }}
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <div>
+    <section class="sml-pad-y3 med-pad-y6">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h1>Your title goes here</h1>
+            <p class="sml-push-y2 med-push-y3">
+              Sub heading goes here, lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. In nibh libero, venenatis sed justo eu,
+              sollicitudin sollicitudin nisi. Integer semper tortor orci,
+              id ultricies velit laoreet in. Vestibulum sit amet ante vel risus
+              ornare ultrices sed id leo.
+            </p>
+            <a class="btn btn-block sml-push-y2 med-push-y3" href="#TODO">
+              Call to action
+            </a>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
+    <section class="sml-pad-y3 med-pad-y6 fill-grey-light">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Section title goes here</h2>
+            <p class="sml-push-y2 med-push-y3">
+              Body text goes here, lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. In nibh libero, venenatis sed justo eu,
+              sollicitudin sollicitudin nisi. Integer semper tortor orci,
+              id ultricies velit laoreet in. Vestibulum sit amet ante vel risus
+              ornare ultrices sed id leo.
+            </p>
+            <p>
+              Body text goes here, lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. In nibh libero, venenatis sed justo eu,
+              sollicitudin sollicitudin nisi. Integer semper tortor orci,
+              id ultricies velit laoreet in. Vestibulum sit amet ante vel risus
+              ornare ultrices sed id leo.
+            </p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
-  }
-}
+  // TODO
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
-

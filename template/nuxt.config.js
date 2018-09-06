@@ -7,16 +7,25 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '{{escape description }}' }
+      { hid: 'description', name: 'description', content: '{{ escape description }}' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    '~/assets/css/main.scss'
+  ],
+  modules: [
+    'nuxt-sass-resources-loader'
+  ],
+  sassResources: [
+    '~/assets/css/_setup.scss'
+  ],
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#3B8070' }, // TODO: choose theme color
   /*
   ** Build configuration
   */
@@ -34,6 +43,17 @@ module.exports = {
         })
       }
     }
+  },
+  vendor: [
+    'babel-polyfill'
+  ],
+  babel: {
+    presets: [
+      ['vue-app', {
+          useBuiltIns: true,
+          targets: { ie: 9, uglify: true }
+        }
+      ]
+    ]
   }
 }
-
