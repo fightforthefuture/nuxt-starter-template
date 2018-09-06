@@ -75,14 +75,21 @@
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
+
+    <SocialSidebar />
   </div>
 </template>
 
 <script>
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
+  components: {
+    SocialSidebar
+  },
+
   head() {
     return {
       title: config.sharing.title,
