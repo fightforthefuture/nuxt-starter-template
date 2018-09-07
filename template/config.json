@@ -1,10 +1,11 @@
 {
   "sharing": {
-    "title": "TODO: title",
-    "description": "TODO: description",
-    "image": "https://www.EXAMPLE.com/share.jpg",
-    "defaultTweetText": "TODO: tweet text",
-    "url": "https://www.EXAMPLE.com"
+    "title": "{{ name }}",
+    "description": "{{ description }}",
+    "image": "https://www.{{ domainName }}/share.jpg",
+    "defaultTweetText": "",
+    "url": "https://www.{{ domainName }}"
   },
-  "googleAnalyticsId": "UA-XXXXXXXXX-X"
+  "googleAnalyticsId": "{{ googleAnalyticsId }}",
+  "actionNetworkPetitonId": "{{ actionNetworkPetitonId }}"
 }
