@@ -37,7 +37,7 @@ p:last-of-type {
 
 // Typography > Text > Modifiers
 strong {
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 em {
   font-style: italic;
