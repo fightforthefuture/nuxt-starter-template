@@ -46,6 +46,23 @@ export function createMetaTags(tags={}) {
   return Object.values(meta)
 }
 
+// POST form data
+export function postFormData(url, data={}) {
+  const axios = require('axios')
+  const qs = require('qs')
+
+  return axios.post(url, qs.stringify(data), {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  })
+}
+
+// POST form data to Mothership
+export function sendToMothership(data={}, submission={}) {
+  return postFormData('https://queue.fightforthefuture.org/action', data)
+}
+
 // Open a pop-up window (mostly for sharing actions)
 export function openPopup(url, title='popup', w=600, h=500) {
   // Fixes dual-screen position

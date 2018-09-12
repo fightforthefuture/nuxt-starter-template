@@ -34,6 +34,12 @@ module.exports = {
       'message': 'Action Network Petition ID',
       'default': null
     },
+    donateUrl: {
+      'type': 'string',
+      'required': false,
+      'message': 'Donate URL',
+      'default': 'https://donate.fightforthefuture.org/'
+    },
     // Can't seem to make the author prompt *not* display...
     author: {
       'type': 'string',

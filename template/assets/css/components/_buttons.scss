@@ -52,7 +52,7 @@ button.btn {
 .btn[disabled]:hover,
 .btn:disabled:focus,
 .btn[disabled]:focus {
-  background: $grey-light-color;
+  background: $grey-color;
   cursor: default;
 }
 
