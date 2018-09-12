@@ -22,7 +22,7 @@ form input[type=tel],
 form textarea {
   display: block;
   width: 100%;
-  padding: 6px $gutter 7px;
+  padding: ($gutter + 1) $gutter*2 ($gutter + 2);
   background: $white;
   border: 1px solid $grey-light-color;
   border-radius: $default-border-radius;
