@@ -27,7 +27,11 @@
                   Read the Letter
                 </a>
               </li>
-
+              <li>
+                <a @click.prevent="scrollTo('#print')">
+                  Print the Letter
+                </a>
+              </li>
               <li>
                 <a @click.prevent="scrollTo('#quotes')">
                   Quotes
@@ -60,6 +64,17 @@
       </div> <!-- .wrapper -->
     </section>
 
+
+    <section id="print" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <PrintTheLetter/>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <section id="quotes" class="sml-pad-y3 med-pad-y6">
       <div class="wrapper">
         <div class="row">
@@ -81,6 +96,7 @@ import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import QuoteScroller from '~/components/QuoteScroller'
 import ReadTheLetter from '~/components/ReadTheLetter'
+import PrintTheLetter from '~/components/PrintTheLetter'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
@@ -88,6 +104,7 @@ export default {
     ActionNetworkForm,
     QuoteScroller,
     ReadTheLetter,
+    PrintTheLetter,
     SocialSidebar
   },
 
