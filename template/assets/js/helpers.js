@@ -63,6 +63,11 @@ export function sendToMothership(data={}, submission={}) {
   return postFormData('https://queue.fightforthefuture.org/action', data)
 }
 
+// Wrap text with two new lines in paragraph tags
+export function simpleFormat(text) {
+  return text.split('\n\n').map(l => `<p>${l}</p>`).join('')
+}
+
 // Open a pop-up window (mostly for sharing actions)
 export function openPopup(url, title='popup', w=600, h=500) {
   // Fixes dual-screen position
