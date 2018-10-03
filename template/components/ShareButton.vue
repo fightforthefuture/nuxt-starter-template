@@ -2,7 +2,7 @@
   <a :href="shareURL" @click.prevent="share()" target="_blank"
      :class="[ isButton ? `btn btn-${networkName}` : '' ]">
     <slot>
-      <span>Share on {{ network }}</span>
+      <span v-if="shouldDisplayText">Share on {{ network }}</span>
       <img v-if="networkName === 'twitter'"
            src="~/assets/images/twitter-logo.svg"
            alt="Twitter logo">
@@ -35,6 +35,11 @@ export default {
       default: null
     },
     isButton: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    shouldDisplayText: {
       type: Boolean,
       required: false,
       default: true
