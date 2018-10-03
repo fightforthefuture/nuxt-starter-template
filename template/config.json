@@ -7,6 +7,6 @@
     "url": "https://www.{{ domainName }}"
   },
   "googleAnalyticsId": "{{ googleAnalyticsId }}",
-  "actionNetworkPetitonId": "{{ actionNetworkPetitonId }}",
+  "actionNetworkPetitionId": "{{ actionNetworkPetitionId }}",
   "donateUrl": "{{ donateUrl }}"
 }

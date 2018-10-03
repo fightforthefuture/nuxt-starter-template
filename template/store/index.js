@@ -4,7 +4,7 @@ import config from '~/config'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      anPetitionId: config.actionNetworkPetitonId,
+      anPetitionId: config.actionNetworkPetitionId,
       donateUrl: config.donateUrl,
       modalVisible: false,
       modalType: null

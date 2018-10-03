@@ -73,7 +73,6 @@
 
 <script>
 import axios from 'axios'
-import config from '~/config'
 import { sendToMothership } from '~/assets/js/helpers'
 import ShareButton from '~/components/ShareButton'
 
@@ -96,7 +95,7 @@ export default {
   },
 
   computed: {
-    donateUrl () { return config.donateUrl }
+    donateUrl () { return this.$store.state.donateUrl }
   },
 
   methods: {
@@ -120,7 +119,7 @@ export default {
           // contact_congress: 1, // TODO: Optional
           // fcc_ecfs_docket: "17-108", // TODO: Optional
           an_tags: "[\"net-neutrality\"]",
-          an_petition_id: config.actionNetworkPetitonId
+          an_petition_id: this.$store.state.anPetitionId
           // action_comment: TODO add if desired
         })
 
