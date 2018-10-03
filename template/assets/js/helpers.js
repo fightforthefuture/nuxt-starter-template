@@ -46,7 +46,7 @@ export function createMetaTags(tags={}) {
   return Object.values(meta)
 }
 
-// POST to a url
+// POST form data to a url
 export function postFormData(url, data={}) {
   const axios = require('axios')
   const qs = require('qs')

@@ -5,6 +5,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       anPetitionId: config.actionNetworkPetitonId,
+      donateUrl: config.donateUrl,
       modalVisible: false,
       modalType: null
     },
