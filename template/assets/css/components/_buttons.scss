@@ -4,7 +4,7 @@
 .btn {
   // TODO: update style
   display: inline-block;
-  padding: $gutter/2 $gutter*4 ($gutter/2 + 2);
+  padding: $gutter/2 $gutter*2 ($gutter/2 + 2);
   overflow: hidden;
   background: $brand-color;
   border: none;
@@ -20,6 +20,11 @@
     -webkit-user-select: none;
   user-select:           none;
   -webkit-appearance: none;
+
+  @include respond-to(med) {
+    padding-right: $gutter*4;
+    padding-left:  $gutter*4;
+  }
 }
 .btn:hover,
 .btn:focus {
