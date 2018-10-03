@@ -46,6 +46,23 @@ export function createMetaTags(tags={}) {
   return Object.values(meta)
 }
 
+// POST to a url
+export function postFormData(url, data={}) {
+  const axios = require('axios')
+  const qs = require('qs')
+
+  return axios.post(url, qs.stringify(data), {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  })
+}
+
+// POST form data to Mothership
+export function sendToMothership(data={}, submission={}) {
+  return postFormData('https://queue.fightforthefuture.org/action', data)
+}
+
 // Open a pop-up window (mostly for sharing actions)
 export function openPopup(url, title='popup', w=600, h=500) {
   // Fixes dual-screen position
@@ -105,4 +122,31 @@ export function smoothScrollToElement(el, duration) {
   if (el) {
     smoothScrollTo(el.offsetLeft, el.offsetTop, duration)
   }
+}
+
+// Smooth step scroll within an element
+export function smoothScrollWithinElement(el, endY, duration) {
+  var el = el,
+      startY = el.scrollTop,
+      change = endY - startY,
+      currentTime = 0,
+      increment = 20,
+      duration = typeof duration !== 'undefined' ? duration : 400,
+
+  easeInOutQuad = function (time, start, change, duration) {
+    time /= duration/2;
+    if (time < 1) return change/2*time*time + start
+    time--
+    return -change/2 * (time*(time-2) - 1) + start
+  },
+
+  smoothStepScroll = function() {
+    currentTime += increment
+    var val = easeInOutQuad(currentTime, startY, change, duration)
+    el.scrollTop = val
+    if(currentTime < duration) {
+      setTimeout(smoothStepScroll, increment)
+    }
+  }
+  smoothStepScroll()
 }
