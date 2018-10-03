@@ -129,8 +129,8 @@ export default {
         this.hasSigned = true
       }
       catch (err) {
-        self.isSending = false
-        self.errorMessage = "Sorry, that didn’t work for some reason. Please try again."
+        this.isSending = false
+        this.errorMessage = "Sorry, that didn’t work for some reason. Please try again."
       }
     },
   }
