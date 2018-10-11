@@ -7,6 +7,7 @@
     "url": "https://www.{{ domainName }}"
   },
   "googleAnalyticsId": "{{ googleAnalyticsId }}",
-  "actionNetworkPetitonId": "{{ actionNetworkPetitonId }}",
-  "donateUrl": "{{ donateUrl }}"
+  "actionNetworkPetitionId": "{{ actionNetworkPetitionId }}",
+  "donateUrl": "{{ donateUrl }}",
+  "letterText": "Dear Legislators,\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat ipsum ut felis ultricies ultricies ut sed velit. Proin lobortis efficitur turpis in commodo. Integer faucibus, tellus ac faucibus luctus, sapien diam ultricies elit, vel eleifend quam orci et lorem.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat ipsum ut felis ultricies ultricies ut sed velit. Proin lobortis efficitur turpis in commodo. Integer faucibus, tellus ac faucibus luctus sapien.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat ipsum ut felis ultricies ultricies ut sed velit. Proin lobortis efficitur turpis in commodo.\n\nSincerely,\n\n[Your Name Here]"
 }

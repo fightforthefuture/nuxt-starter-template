@@ -28,7 +28,7 @@ module.exports = {
       'message': 'Google Analytics ID',
       'default': null
     },
-    actionNetworkPetitonId: {
+    actionNetworkPetitionId: {
       'type': 'string',
       'required': false,
       'message': 'Action Network Petition ID',

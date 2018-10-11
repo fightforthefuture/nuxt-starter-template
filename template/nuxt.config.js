@@ -27,6 +27,14 @@ module.exports = {
   */
   loading: { color: '#3B8070' }, // TODO: choose theme color
   /*
+  ** Router configuration
+  */
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
+  /*
   ** Build configuration
   */
   build: {

@@ -3,6 +3,7 @@
 // Usage in a Vue component:
 // import { createMetaTags, myOtherHelperFunction } from '~/assets/js/helpers'
 
+import axios from 'axios'
 
 // Add meta tags per page for Twitter and Facebook share cards
 export function createMetaTags(tags={}) {
@@ -46,7 +47,7 @@ export function createMetaTags(tags={}) {
   return Object.values(meta)
 }
 
-// POST form data
+// POST form data to a url
 export function postFormData(url, data={}) {
   const axios = require('axios')
   const qs = require('qs')
@@ -61,6 +62,11 @@ export function postFormData(url, data={}) {
 // POST form data to Mothership
 export function sendToMothership(data={}, submission={}) {
   return postFormData('https://queue.fightforthefuture.org/action', data)
+}
+
+// Wrap text with two new lines in paragraph tags
+export function simpleFormat(text) {
+  return text.split('\n\n').map(l => `<p>${l}</p>`).join('')
 }
 
 // Open a pop-up window (mostly for sharing actions)
@@ -149,4 +155,33 @@ export function smoothScrollWithinElement(el, endY, duration) {
     }
   }
   smoothStepScroll()
+}
+
+// Pre-select US State based on IP
+export async function geocodeState() {
+  const state = {
+    name: null,
+    abbr: null
+  }
+
+  try {
+    const response = await axios.get('https://fftf-geocoder.herokuapp.com')
+    const geo = response.data
+
+    if (
+      geo.country.iso_code === 'US' &&
+      geo.subdivisions &&
+      geo.subdivisions[0] &&
+      geo.subdivisions[0].names &&
+      geo.subdivisions[0].names.en
+    ) {
+      state.name = geo.subdivisions[0].names.en
+      state.abbr = geo.subdivisions[0].iso_code
+    }
+  }
+  catch (err) {
+    console.error(err)
+  }
+
+  return state
 }

@@ -163,6 +163,19 @@
 .flex-row > *:last-child {
   margin-right: 0;
 }
+.sml-flex-col {
+  flex-direction: column;
+}
+.med-flex-row {
+  @include respond-to(med) {
+    flex-direction: row;
+  }
+}
+.lrg-flex-row {
+  @include respond-to(lrg) {
+    flex-direction: row;
+  }
+}
 @for $i from 1 through 4 {
   .sml-flex-#{$i} {
     flex: $i;
