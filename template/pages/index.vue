@@ -86,6 +86,18 @@
       </div> <!-- .wrapper -->
     </section>
 
+    <section id="logos" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Logo Cloud</h2>
+
+            <LogoCloud class="sml-push-y2 med-push-y3"/>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <SocialSidebar />
   </div>
 </template>
@@ -97,6 +109,7 @@ import ActionNetworkForm from '~/components/ActionNetworkForm'
 import QuoteScroller from '~/components/QuoteScroller'
 import ReadTheLetter from '~/components/ReadTheLetter'
 import PrintTheLetter from '~/components/PrintTheLetter'
+import LogoCloud from '~/components/LogoCloud'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
@@ -105,6 +118,7 @@ export default {
     QuoteScroller,
     ReadTheLetter,
     PrintTheLetter,
+    LogoCloud,
     SocialSidebar
   },
 
