@@ -8,7 +8,12 @@ const createStore = () => {
       donateUrl: config.donateUrl,
       letterText: config.letterText,
       modalVisible: false,
-      modalType: null
+      modalType: null,
+      mapboxToken: config.mapboxToken,
+      map: {
+        zoom: null,
+        currentPin: null
+      }
     },
     mutations: {
       setModalVisibility(state, value) {
@@ -17,6 +22,14 @@ const createStore = () => {
 
       setModalType(state, value) {
         state.modalType = value
+      },
+
+      setMapZoom(state, value) {
+        state.map.zoom = value
+      },
+
+      setMapCurrentPin(state, value) {
+        state.map.currentPin = value
       }
     }
   })

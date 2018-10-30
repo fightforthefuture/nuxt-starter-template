@@ -25,6 +25,10 @@ $ npm install # Or yarn install
 
 ### Development
 
+To test a local copy of the starter template, create a new local project instance with:
+`vue init ./nuxt-starter-template my-project`
+
+To run the local server:
 ``` bash
 # serve with hot reloading at localhost:3000
 $ npm run dev

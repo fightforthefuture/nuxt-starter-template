@@ -45,6 +45,12 @@ button.btn {
   width: 100%;
 }
 
+// Buttons > Small
+.btn.btn-sml {
+  padding: $gutter/2 $gutter;
+  font-size: $base-font-size;
+}
+
 // Buttons > Disabled
 .btn:disabled,
 .btn[disabled],
