@@ -215,6 +215,7 @@ export default {
 
   methods: {
     createMap() {
+      if (!settings.mapboxToken) console.error('Please add a mapboxToken in config.json')
       L.mapbox.accessToken = settings.mapboxToken
       // see https://www.mapbox.com/api-documentation/#introduction
       const mapId = 'mapbox.light'
