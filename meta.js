@@ -40,6 +40,11 @@ module.exports = {
       'message': 'Donate URL',
       'default': 'https://donate.fightforthefuture.org/'
     },
+    mapboxToken: {
+      'type': 'string',
+      'required': false,
+      'message': 'Mapbox Token'
+    },
     // Can't seem to make the author prompt *not* display...
     author: {
       'type': 'string',

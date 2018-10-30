@@ -86,17 +86,31 @@
       </div> <!-- .wrapper -->
     </section>
 
+    <section id="map" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Map</h2>
+
+            <Map :events="events" class="sml-push-y2 med-push-y3" />
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <SocialSidebar />
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import QuoteScroller from '~/components/QuoteScroller'
 import ReadTheLetter from '~/components/ReadTheLetter'
 import PrintTheLetter from '~/components/PrintTheLetter'
+import Map from '~/components/Map'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
@@ -105,6 +119,7 @@ export default {
     QuoteScroller,
     ReadTheLetter,
     PrintTheLetter,
+    Map,
     SocialSidebar
   },
 
@@ -117,6 +132,31 @@ export default {
         image: config.sharing.image,
         url: config.sharing.url
       })
+    }
+  },
+
+  async asyncData() {
+    let events = []
+    try {
+      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
+
+      events = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
+        if (a.address < b.address) {
+          return -1
+        }
+        else if (a.address > b.address) {
+          return 1
+        }
+        else {
+          return 0
+        }
+      })
+    }
+    catch (error) {
+      //
+    }
+    return {
+      events: events
     }
   },
 
