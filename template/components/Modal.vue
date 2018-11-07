@@ -21,9 +21,9 @@ body.modal-open {
   position: relative;
   width: 90%;
   max-width: 700px;
-  max-height: 96%;
+  max-height: 96vh;
   overflow: hidden;
-  background-color: $brand-dark-color;
+  background-color: $white;
   border-radius: $default-border-radius;
 }
 .modal-scroll {
@@ -33,7 +33,7 @@ body.modal-open {
   position: absolute;
   top: $gutter;
   right: $gutter;
-  font-size: $font-size-4;
+  font-size: $font-size-2;
   line-height: 1;
   background-color: transparent;
   border:none;
@@ -77,7 +77,6 @@ export default {
     close() {
       this.$store.commit('setModalVisibility', false)
       this.$store.commit('setModalType', null)
-      this.$store.commit('setModalData', null)
     }
   }
 }
