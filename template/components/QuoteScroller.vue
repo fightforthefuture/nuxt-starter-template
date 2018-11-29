@@ -1,13 +1,4 @@
 <style lang="scss" scoped>
-// Transition
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
 // Quotes
 .quotes-wrapper {
   // NOTE: Magic numbers. Update them based on the height of the longest quote.

@@ -98,7 +98,25 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="map" class="sml-pad-y3 med-pad-y6">
+    <section id="photo" class="sml-pad-y3 med-pad-y6">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Take a photo</h2>
+
+            <SelfieForm />
+
+            <p class="sml-push-y2 med-push-y3">
+              <nuxt-link to="/gallery">
+                View the gallery
+              </nuxt-link>
+            </p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
+    <section id="map" class="sml-pad-y3 med-pad-y6 fill-grey-light">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -110,7 +128,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <SocialSidebar />
+    <SocialSidebar/>
   </div>
 </template>
 
@@ -124,6 +142,7 @@ import ReadTheLetter from '~/components/ReadTheLetter'
 import PrintTheLetter from '~/components/PrintTheLetter'
 import LogoCloud from '~/components/LogoCloud'
 import Map from '~/components/Map'
+import SelfieForm from '~/components/SelfieForm'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
@@ -134,6 +153,7 @@ export default {
     PrintTheLetter,
     LogoCloud,
     Map,
+    SelfieForm,
     SocialSidebar
   },
 

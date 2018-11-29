@@ -42,6 +42,12 @@ form textarea:focus {
   border-color: $text-color;
   border-width: 1px;
 }
+form input.flat-top,
+form textarea.flat-top {
+  border: none;
+  border-top-right-radius: 0;
+  border-top-left-radius:  0;
+}
 
 // Form > Placeholders
 ::-webkit-input-placeholder {

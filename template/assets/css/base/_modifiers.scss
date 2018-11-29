@@ -9,12 +9,26 @@
 .is-rounded {
   border-radius: $default-border-radius;
 }
+.is-rounded-top {
+  border-top-right-radius: $default-border-radius;
+  border-top-left-radius:  $default-border-radius;
+}
+.is-rounded-bottom {
+  border-bottom-right-radius: $default-border-radius;
+  border-bottom-left-radius:  $default-border-radius;
+}
 
 // Modifiers > Fills
 
 // TODO: use if needed
 .fill-grey-light {
   background: $grey-light-color;
+}
+.fill-grey {
+  background: $grey-color;
+}
+.fill-grey-dark {
+  background: $grey-dark-color;
 }
 .fill-white {
   background: $white;

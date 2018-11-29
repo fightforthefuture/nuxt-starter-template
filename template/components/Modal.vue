@@ -12,6 +12,7 @@ body.modal-open {
   right: 0;
   bottom: 0;
   z-index: 9999;
+  animation: fade-in .3s;
   background-color: transparentize($black, 0.15);
   overflow: auto;
 }
@@ -77,6 +78,7 @@ export default {
     close() {
       this.$store.commit('setModalVisibility', false)
       this.$store.commit('setModalType', null)
+      this.$store.commit('setModalData', null)
     }
   }
 }

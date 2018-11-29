@@ -56,8 +56,14 @@ small {
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
 .text-white {
   color: $white;
+}
+.text-meta {
+  color: $grey-color;
 }
 .text-brand {
   color: $brand-color;
