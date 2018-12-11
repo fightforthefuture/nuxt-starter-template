@@ -85,17 +85,48 @@ export default {
     return {
       isSending: false,
       hasSigned: false,
-      errorMessage: null,
-      // form fields
-      name: null,
-      email: null,
-      address: null,
-      zipCode: null
+      errorMessage: null
     }
   },
 
   computed: {
-    donateUrl () { return this.$store.state.donateUrl }
+    donateUrl () { return this.$store.state.donateUrl },
+
+    name: {
+      get() {
+        return this.$store.state.name
+      },
+      set(value) {
+        this.$store.commit('setName', value)
+      }
+    },
+
+    email: {
+      get() {
+        return this.$store.state.email
+      },
+      set(value) {
+        this.$store.commit('setEmail', value)
+      }
+    },
+
+    address: {
+      get() {
+        return this.$store.state.address
+      },
+      set(value) {
+        this.$store.commit('setAddress', value)
+      }
+    },
+
+    zipCode: {
+      get() {
+        return this.$store.state.zipCode
+      },
+      set(value) {
+        this.$store.commit('setZipCode', value)
+      }
+    }
   },
 
   methods: {

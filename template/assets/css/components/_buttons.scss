@@ -38,6 +38,13 @@ button.btn {
   outline: none;
   border: 0;
 }
+// Button > with image
+.btn img {
+  display: inline-block;
+  max-height: $m-font-size-2 * $base-line-height;
+  width: auto;
+  margin-right: $gutter;
+}
 
 // Buttons > Block
 .btn.btn-block {
@@ -49,6 +56,11 @@ button.btn {
 .btn.btn-sml {
   padding: $gutter/2 $gutter;
   font-size: $base-font-size;
+}
+// Button > Small > with image
+.btn.btn-sml img {
+  max-height: $base-font-size;
+  vertical-align: baseline;
 }
 
 // Buttons > Disabled
