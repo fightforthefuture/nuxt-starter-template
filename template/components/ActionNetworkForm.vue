@@ -155,6 +155,9 @@ export default {
         })
 
         this.$trackEvent('petition_form', 'submit')
+        // TODO: Optional, enable callpower campaign after-action
+        // this.$store.commit('setModalVisibility', true)
+        // this.$store.commit('setModalType', 'call-form')
         this.isSending = false
         this.hasSigned = true
       }
