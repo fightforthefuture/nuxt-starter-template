@@ -2,10 +2,6 @@
 
 // Modifiers > Borders
 
-// TODO: use if needed
-// .with-border {
-//   border: 1px solid $grey-light-color;
-// }
 .is-rounded {
   border-radius: $default-border-radius;
 }
@@ -17,10 +13,15 @@
   border-bottom-right-radius: $default-border-radius;
   border-bottom-left-radius:  $default-border-radius;
 }
+// .with-border {
+//   border: 1px solid $grey-light-color;
+// }
+.with-border-bottom {
+  border-bottom: 1px solid $grey-light-color;
+}
 
 // Modifiers > Fills
 
-// TODO: use if needed
 .fill-grey-light {
   background: $grey-light-color;
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-center">
+    <h2>
       <span class="text-success">Thanks!</span> Can you call?
     </h2>
     <p class="sml-push-y1">
