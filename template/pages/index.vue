@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <section class="sml-pad-y3 med-pad-y6">
+  <DefaultLayout>
+    <section class="sml-pad-y3 med-pad-y6 sml-pad-y-top2">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h1>Your title goes here</h1>
-            <p class="sml-push-y2 med-push-y3">
+            <p>
               Sub heading goes here, lorem ipsum dolor sit amet, consectetur
               adipiscing elit. In nibh libero, venenatis sed justo eu,
               sollicitudin sollicitudin nisi. Integer semper tortor orci,
@@ -129,19 +128,14 @@
     </section>
 
     <SocialSidebar/>
-
-    <Modal>
-      <CallFormModal v-if="modalType === 'call-form'"/>
-      <CallScriptModal v-if="modalType === 'call-script'"/>
-    </Modal>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script>
 import axios from 'axios'
 import config from '~/config'
-import { mapState } from 'vuex'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import DefaultLayout from '~/components/DefaultLayout'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import QuoteScroller from '~/components/QuoteScroller'
 import ReadTheLetter from '~/components/ReadTheLetter'
@@ -150,12 +144,10 @@ import LogoCloud from '~/components/LogoCloud'
 import Map from '~/components/Map'
 import SelfieForm from '~/components/SelfieForm'
 import SocialSidebar from '~/components/SocialSidebar'
-import Modal from '~/components/Modal'
-import CallFormModal from '~/components/CallFormModal'
-import CallScriptModal from '~/components/CallScriptModal'
 
 export default {
   components: {
+    DefaultLayout,
     ActionNetworkForm,
     QuoteScroller,
     ReadTheLetter,
@@ -163,10 +155,7 @@ export default {
     LogoCloud,
     Map,
     SelfieForm,
-    SocialSidebar,
-    Modal,
-    CallFormModal,
-    CallScriptModal
+    SocialSidebar
   },
 
   head() {
@@ -204,10 +193,6 @@ export default {
     return {
       events: events
     }
-  },
-
-  computed: {
-    ...mapState(['modalType', 'modalData'])
   },
 
   methods: {

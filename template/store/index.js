@@ -11,10 +11,11 @@ const createStore = () => {
       donateUrl: config.donateUrl,
       callScript: config.callScript,
       letterText: config.letterText,
+      isArchived: config.isArchived,
 
       // State > Modal
-      modalVisible: false,
-      modalType: null,
+      modalVisible: config.isArchived ? true : false,
+      modalType: config.isArchived ? 'archived' : null,
       modalData: null,
 
       // State > Map

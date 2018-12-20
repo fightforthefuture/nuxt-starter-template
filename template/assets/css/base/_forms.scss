@@ -42,6 +42,11 @@ form textarea:focus {
   border-color: $text-color;
   border-width: 1px;
 }
+form input:disabled,
+form textarea:disabled,
+form select:disabled {
+  opacity: 0.6;
+}
 form input.flat-top,
 form textarea.flat-top {
   border: none;

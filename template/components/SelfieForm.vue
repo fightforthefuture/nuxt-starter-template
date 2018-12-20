@@ -92,7 +92,8 @@
           </div> <!-- .row -->
         </div> <!-- .fill -->
         <div class="sml-pad-2 fill-grey-dark is-rounded-bottom">
-          <button class="btn btn-block" :disabled="isSending || !photoSource">
+          <button class="btn btn-block"
+                  :disabled="isSending || !photoSource">
             <span v-if="isSending">
               Sending...
             </span>

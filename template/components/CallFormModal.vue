@@ -31,6 +31,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import { postFormData } from '~/assets/js/helpers'
 
 export default {
@@ -42,7 +43,7 @@ export default {
   },
 
   computed: {
-    campaignId() { return this.$store.state.callpowerCampaignId },
+    ...mapState(['callpowerCampaignId']),
 
     phone: {
       get() {
@@ -69,7 +70,7 @@ export default {
 
       try {
         const { data } = await postFormData('https://call-congress.fightforthefuture.org/create', {
-          campaignId: this.campaignId,
+          campaignId: this.callpowerCampaignId,
           userPhone: this.phone,
           userLocation: this.zipCode
         })

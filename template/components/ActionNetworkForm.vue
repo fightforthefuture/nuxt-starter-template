@@ -73,6 +73,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import { sendToMothership } from '~/assets/js/helpers'
 import ShareButton from '~/components/ShareButton'
 
@@ -90,7 +91,7 @@ export default {
   },
 
   computed: {
-    donateUrl () { return this.$store.state.donateUrl },
+    ...mapState(['donateUrl']),
 
     name: {
       get() {
