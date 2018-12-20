@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <PageHeader/>
-
+  <GalleryLayout>
     <div class="site-content">
       <section class="sml-pad-y5">
         <div class="wrapper">
@@ -16,11 +14,7 @@
         </div> <!-- .wrapper -->
       </section>
     </div> <!-- .site-content -->
-
-    <Modal>
-      <SelfieModal v-if="modalType === 'selfie'" :selfie="modalData"/>
-    </Modal>
-  </div>
+  </GalleryLayout>
 </template>
 
 <script>
@@ -28,14 +22,12 @@ import axios from 'axios'
 import config from '~/config'
 import { mapState } from 'vuex'
 import { createMetaTags } from '~/assets/js/helpers'
-import PageHeader from '~/components/PageHeader'
+import GalleryLayout from '~/components/GalleryLayout'
 import SelfieGrid from '~/components/SelfieGrid'
 
 export default {
-  layout: 'skeleton',
-
   components: {
-    PageHeader,
+    GalleryLayout,
     SelfieGrid
   },
 

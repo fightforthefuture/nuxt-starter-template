@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <section class="sml-pad-y3 med-pad-y6">
+  <DefaultLayout>
+    <section class="sml-pad-y3 med-pad-y6 sml-pad-y-top2">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h1>Your title goes here</h1>
-            <p class="sml-push-y2 med-push-y3">
+            <p>
               Sub heading goes here, lorem ipsum dolor sit amet, consectetur
               adipiscing elit. In nibh libero, venenatis sed justo eu,
               sollicitudin sollicitudin nisi. Integer semper tortor orci,
@@ -129,13 +128,14 @@
     </section>
 
     <SocialSidebar/>
-  </div>
+  </DefaultLayout>
 </template>
 
 <script>
 import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import DefaultLayout from '~/components/DefaultLayout'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import QuoteScroller from '~/components/QuoteScroller'
 import ReadTheLetter from '~/components/ReadTheLetter'
@@ -147,6 +147,7 @@ import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
   components: {
+    DefaultLayout,
     ActionNetworkForm,
     QuoteScroller,
     ReadTheLetter,

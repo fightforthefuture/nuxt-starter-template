@@ -71,6 +71,27 @@
   }
 }
 
+// Spacing > Padding-Y-Top
+@each $i in 1, 2, 3, 4, 5, 6 {
+  .sml-pad-y-top#{$i} {
+    padding-top:    $gutter * ($i);
+  }
+}
+@include respond-to(med) {
+  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+    .med-pad-y-top#{$i} {
+      padding-top:    $gutter * ($i);
+    }
+  }
+}
+@include respond-to(lrg) {
+  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+    .lrg-pad-y-top#{$i} {
+      padding-top:    $gutter * ($i);
+    }
+  }
+}
+
 // Spacing > Margin
 .sml-push-y-half {
   margin-top: $gutter/2;
