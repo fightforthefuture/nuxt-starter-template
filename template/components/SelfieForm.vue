@@ -62,7 +62,7 @@
                 <div v-if="hasWebcam">
                   <a class="btn btn-block btn-sml"
                      @click.prevent="startLiveView()"
-                     :disabled="isCapturing || isArchived"
+                     :disabled="isCapturing"
                      v-html="captureButtonHtml">
                   </a>
                 </div> <!-- v-if -->
@@ -70,13 +70,13 @@
                 <div>
                   <a class="btn btn-block btn-sml btn-alt"
                      @click.prevent="openFilePicker()"
-                     :disabled="isCapturing || isArchived">
+                     :disabled="isCapturing">
                     <img src="/photo-upload.svg">Upload
                   </a>
                   <input type="file"
                          v-show="false"
                          @change="uploadPhoto"
-                         :disabled="isCapturing || isArchived"
+                         :disabled="isCapturing"
                          ref="fileInput">
                 </div>
               </div> <!-- .flex-row -->
@@ -86,15 +86,14 @@
                 <h5>Your Net Neutrality thoughts:</h5>
               </label>
               <textarea v-model="comment" class="flat-top"
-                        placeholder="I care about Net Neutrality because..."
-                        :disabled="isArchived">
+                        placeholder="I care about Net Neutrality because...">
               </textarea>
             </div> <!-- .c -->
           </div> <!-- .row -->
         </div> <!-- .fill -->
         <div class="sml-pad-2 fill-grey-dark is-rounded-bottom">
           <button class="btn btn-block"
-                  :disabled="isSending || !photoSource || isArchived">
+                  :disabled="isSending || !photoSource">
             <span v-if="isSending">
               Sending...
             </span>
@@ -118,7 +117,6 @@
 
 <script>
 import axios from 'axios'
-import { mapState } from 'vuex'
 import { createPNG } from '~/assets/js/selfie'
 import { isMobileOS } from '~/assets/js/helpers'
 import SelfieFormComplete from '~/components/SelfieFormComplete'
@@ -144,8 +142,6 @@ export default {
   },
 
   computed: {
-    ...mapState(['isArchived']),
-
     photoSource: {
       get() {
         return this.$store.state.photoSource
@@ -200,8 +196,6 @@ export default {
     },
 
     async startLiveView() {
-      if (this.isArchived) { return }
-
       this.photoSource = null
 
       try {

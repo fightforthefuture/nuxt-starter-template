@@ -10,10 +10,10 @@
     <p v-if="errorMessage" class="text-warn sml-push-y2">{{ errorMessage }}</p>
     <form @submit.prevent="submitForm()" class="flex-row sml-push-y2">
       <input class="phone sml-flex-2" type="tel" placeholder="Phone Number*"
-             v-model.trim="phone" required :disabled="isArchived">
+             v-model.trim="phone" required>
       <input class="zip" type="tel" placeholder="ZIP Code*"
-             v-model.trim="zipCode" required :disabled="isArchived">
-      <button class="btn" :disabled="isSending || isArchived">
+             v-model.trim="zipCode" required>
+      <button class="btn" :disabled="isSending">
         <span v-if="isSending">...</span>
         <span v-else>Call</span>
       </button>
@@ -43,7 +43,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['callpowerCampaignId', 'isArchived']),
+    ...mapState(['callpowerCampaignId']),
 
     phone: {
       get() {

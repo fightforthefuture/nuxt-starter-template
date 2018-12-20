@@ -40,20 +40,16 @@
           class="sml-push-y2 med-push-y3">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
       <div class="flex-row">
-        <input v-model="name" type="text" placeholder="Name*" required
-               :disabled="isArchived">
-        <input v-model="email" type="email" placeholder="Email*" required
-               :disabled="isArchived">
+        <input v-model="name" type="text" placeholder="Name*" required>
+        <input v-model="email" type="email" placeholder="Email*" required>
       </div> <!-- .flex-row -->
       <div class="flex-row sml-push-y2">
         <input v-model="address" type="text" placeholder="Address"
-               class="sml-flex-4" :disabled="isArchived">
-        <input v-model="zipCode" type="tel" placeholder="ZIP Code"
-               :disabled="isArchived">
+               class="sml-flex-4">
+        <input v-model="zipCode" type="tel" placeholder="ZIP Code">
       </div> <!-- .flex-row -->
 
-      <button class="btn btn-block sml-push-y2 med-push-y3"
-              :disabled="isSending || isArchived">
+      <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
         <span v-if="isSending">
           Sending...
         </span>
@@ -95,7 +91,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['donateUrl', 'isArchived']),
+    ...mapState(['donateUrl']),
 
     name: {
       get() {

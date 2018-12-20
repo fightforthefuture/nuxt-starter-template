@@ -19,8 +19,8 @@
         please visit our homepage</a>.
     </p>
     <p>
-      We&rsquo;re keeping this page available for historic purposes, but any
-      signup functionality is disabled.
+      We&rsquo;re keeping this page available for historic purposes, but some
+      functionality may be disabled or no longer functional.
     </p>
   </div>
 </template>
