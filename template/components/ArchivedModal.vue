@@ -9,7 +9,8 @@
 
 <template>
   <div class="text-center">
-    <img src="~assets/images/fftf-logo.svg" class="grid-center"
+    <!-- TODO: swap image with fftf-logo.svg if modal has a dark background -->
+    <img src="~assets/images/fftf-logo-dark.svg" class="grid-center"
          alt="Fight for the Future logo" />
 
     <p class="sml-push-y2">
