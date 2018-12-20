@@ -1,10 +1,6 @@
 <template>
   <div>
-    <section class="sml-push-y3 med-push-y6">
-      <div class="wrapper">
-        <Logo class="grid-center text-center"/>
-      </div> <!-- .wrapper -->
-    </section>
+    <PageHeader/>
 
     <slot></slot>
 
@@ -14,11 +10,13 @@
 
 <script>
 import Logo from '~/components/Logo'
+import PageHeader from '~/components/PageHeader'
 import PageFooter from '~/components/PageFooter'
 
 export default {
   components: {
     Logo,
+    PageHeader,
     PageFooter
   }
 }

@@ -1,17 +1,17 @@
 <template>
   <div>
-    <PageHeader/>
+    <GalleryHeader/>
 
     <slot></slot>
   </div>
 </template>
 
 <script>
-import PageHeader from '~/components/PageHeader'
+import GalleryHeader from '~/components/GalleryHeader'
 
 export default {
   components: {
-    PageHeader
+    GalleryHeader
   }
 }
 </script>
