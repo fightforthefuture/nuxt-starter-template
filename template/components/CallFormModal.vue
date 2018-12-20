@@ -10,10 +10,10 @@
     <p v-if="errorMessage" class="text-warn sml-push-y2">{{ errorMessage }}</p>
     <form @submit.prevent="submitForm()" class="flex-row sml-push-y2">
       <input class="phone sml-flex-2" type="tel" placeholder="Phone Number*"
-             v-model.trim="phone" required>
+             v-model.trim="phone" required :disabled="isArchived">
       <input class="zip" type="tel" placeholder="ZIP Code*"
-             v-model.trim="zipCode" required>
-      <button class="btn" :disabled="isSending">
+             v-model.trim="zipCode" required :disabled="isArchived">
+      <button class="btn" :disabled="isSending || isArchived">
         <span v-if="isSending">...</span>
         <span v-else>Call</span>
       </button>
@@ -31,6 +31,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import { postFormData } from '~/assets/js/helpers'
 
 export default {
@@ -42,7 +43,7 @@ export default {
   },
 
   computed: {
-    campaignId() { return this.$store.state.callpowerCampaignId },
+    ...mapState(['callpowerCampaignId', 'isArchived']),
 
     phone: {
       get() {
@@ -69,7 +70,7 @@ export default {
 
       try {
         const { data } = await postFormData('https://call-congress.fightforthefuture.org/create', {
-          campaignId: this.campaignId,
+          campaignId: this.callpowerCampaignId,
           userPhone: this.phone,
           userLocation: this.zipCode
         })

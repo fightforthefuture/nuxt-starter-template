@@ -40,16 +40,20 @@
           class="sml-push-y2 med-push-y3">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
       <div class="flex-row">
-        <input v-model="name" type="text" placeholder="Name*" required>
-        <input v-model="email" type="email" placeholder="Email*" required>
+        <input v-model="name" type="text" placeholder="Name*" required
+               :disabled="isArchived">
+        <input v-model="email" type="email" placeholder="Email*" required
+               :disabled="isArchived">
       </div> <!-- .flex-row -->
       <div class="flex-row sml-push-y2">
         <input v-model="address" type="text" placeholder="Address"
-               class="sml-flex-4">
-        <input v-model="zipCode" type="tel" placeholder="ZIP Code">
+               class="sml-flex-4" :disabled="isArchived">
+        <input v-model="zipCode" type="tel" placeholder="ZIP Code"
+               :disabled="isArchived">
       </div> <!-- .flex-row -->
 
-      <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
+      <button class="btn btn-block sml-push-y2 med-push-y3"
+              :disabled="isSending || isArchived">
         <span v-if="isSending">
           Sending...
         </span>
@@ -73,6 +77,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import { sendToMothership } from '~/assets/js/helpers'
 import ShareButton from '~/components/ShareButton'
 
@@ -90,7 +95,7 @@ export default {
   },
 
   computed: {
-    donateUrl () { return this.$store.state.donateUrl },
+    ...mapState(['donateUrl', 'isArchived']),
 
     name: {
       get() {
