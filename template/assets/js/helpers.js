@@ -61,7 +61,7 @@ export function postFormData(url, data={}) {
 
 // POST form data to Mothership
 export function sendToMothership(data={}, submission={}) {
-  return postFormData('https://queue.fightforthefuture.org/action', data)
+  return postFormData('https://queue.fftf.xyz/action', data)
 }
 
 // Wrap text with two new lines in paragraph tags
@@ -165,7 +165,7 @@ export async function geocodeState() {
   }
 
   try {
-    const response = await axios.get('https://fftf-geocoder.herokuapp.com')
+    const response = await axios.get('https://geocode-ip.fftf.xyz')
     const geo = response.data
 
     if (
