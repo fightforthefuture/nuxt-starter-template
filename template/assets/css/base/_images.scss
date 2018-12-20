@@ -4,3 +4,7 @@ img {
   display: block;
   max-width: 100%;
 }
+img.img-inline {
+  display: inline-block;
+  vertical-align: bottom;
+}

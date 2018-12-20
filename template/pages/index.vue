@@ -129,12 +129,18 @@
     </section>
 
     <SocialSidebar/>
+
+    <Modal>
+      <CallFormModal v-if="modalType === 'call-form'"/>
+      <CallScriptModal v-if="modalType === 'call-script'"/>
+    </Modal>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import config from '~/config'
+import { mapState } from 'vuex'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import QuoteScroller from '~/components/QuoteScroller'
@@ -144,6 +150,9 @@ import LogoCloud from '~/components/LogoCloud'
 import Map from '~/components/Map'
 import SelfieForm from '~/components/SelfieForm'
 import SocialSidebar from '~/components/SocialSidebar'
+import Modal from '~/components/Modal'
+import CallFormModal from '~/components/CallFormModal'
+import CallScriptModal from '~/components/CallScriptModal'
 
 export default {
   components: {
@@ -154,7 +163,10 @@ export default {
     LogoCloud,
     Map,
     SelfieForm,
-    SocialSidebar
+    SocialSidebar,
+    Modal,
+    CallFormModal,
+    CallScriptModal
   },
 
   head() {
@@ -192,6 +204,10 @@ export default {
     return {
       events: events
     }
+  },
+
+  computed: {
+    ...mapState(['modalType', 'modalData'])
   },
 
   methods: {

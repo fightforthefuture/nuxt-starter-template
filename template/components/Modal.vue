@@ -26,6 +26,7 @@ body.modal-open {
   overflow: hidden;
   background-color: $white;
   border-radius: $default-border-radius;
+  color: $grey-dark-color;
 }
 .modal-scroll {
   overflow-y: auto;

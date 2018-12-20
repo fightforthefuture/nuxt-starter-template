@@ -46,7 +46,7 @@
 </style>
 
 <template>
-  <div class="social-sidebar med-hide">
+  <div class="social-sidebar sml-hide lrg-show">
     <ShareButton
       network="twitter"
       @click.native="$trackClick('twitter_share_button_sidebar')" />

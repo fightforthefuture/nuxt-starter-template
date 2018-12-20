@@ -34,6 +34,12 @@ module.exports = {
       'message': 'Action Network Petition ID',
       'default': null
     },
+    callpowerCampaignId: {
+      'type': 'string',
+      'required': false,
+      'message': 'Callpower Campaign ID',
+      'default': null
+    },
     donateUrl: {
       'type': 'string',
       'required': false,
