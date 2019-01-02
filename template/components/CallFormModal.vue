@@ -8,7 +8,7 @@
       directly with your lawmaker&rsquo;s office.
     </p>
     <p v-if="errorMessage" class="text-warn sml-push-y2">{{ errorMessage }}</p>
-    <form @submit.prevent="submitForm()" class="flex-row sml-push-y2">
+    <form @submit.prevent="submitForm()" class="flex-grid sml-flex-row sml-push-y2">
       <input class="phone sml-flex-2" type="tel" placeholder="Phone Number*"
              v-model.trim="phone" required>
       <input class="zip" type="tel" placeholder="ZIP Code*"

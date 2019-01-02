@@ -39,8 +39,8 @@
       <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
         <div class="sml-push-y2 med-push-y3 sml-pad-2 fill-grey is-rounded-top">
           <p class="text-warn text-center" v-if="errorMessage">{{ errorMessage }}</p>
-          <div class="flex-row sml-flex-col med-flex-row" :class="{'sml-push-y-half': errorMessage}">
-            <div class="">
+          <div class="flex-grid sml-flex-col med-flex-row" :class="{'sml-push-y-half': errorMessage}">
+            <div>
               <div class="preview-container grid-center is-rounded"
                    :style="{ width: previewWidth, height: previewHeight }"
                    @click="clickPreview">
@@ -58,7 +58,7 @@
                 <img v-show="!photoSource" src="~/assets/images/photo-frame.png" alt="" ref="overlay" class="overlay">
               </div>
 
-              <div class="flex-row sml-push-y1">
+              <div class="flex-grid sml-flex-row sml-push-y1">
                 <div v-if="hasWebcam">
                   <a class="btn btn-block btn-sml"
                      @click.prevent="startLiveView()"
@@ -79,17 +79,17 @@
                          :disabled="isCapturing"
                          ref="fileInput">
                 </div>
-              </div> <!-- .flex-row -->
-            </div> <!-- .c -->
-            <div class="flex-row sml-flex-col sml-push-y2 med-push-y0">
+              </div> <!-- .flex-grid -->
+            </div> <!-- flex column -->
+            <div class="flex-grid sml-flex-col sml-push-y2 med-push-y0">
               <label class="flex-fixed-height sml-pad-1 sml-pad-x2 fill-grey-light is-rounded-top">
                 <h5>Your Net Neutrality thoughts:</h5>
               </label>
               <textarea v-model="comment" class="flat-top"
                         placeholder="I care about Net Neutrality because...">
               </textarea>
-            </div> <!-- .c -->
-          </div> <!-- .row -->
+            </div> <!-- .flex-grid -->
+          </div> <!-- .flex-grid -->
         </div> <!-- .fill -->
         <div class="sml-pad-2 fill-grey-dark is-rounded-bottom">
           <button class="btn btn-block"

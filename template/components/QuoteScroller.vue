@@ -45,12 +45,12 @@
 </style>
 
 <template>
-  <div class="quotes-wrapper flex-row flex-center">
+  <div class="quotes-wrapper flex-grid sml-flex-row flex-center">
     <a class="arrow" @click.prevent="prev">
       <img src="~assets/images/arrow-left.svg" alt="Previous" class="grid-center"/>
     </a>
     <transition name="fade" mode="out-in">
-      <div :key="`slide-${activeSlide}`">
+      <div :key="`slide-${activeSlide}`" class="sml-pad-x1">
         <blockquote>{{ quotes[activeSlide].text }}</blockquote>
         <p class="text-brand">{{ quotes[activeSlide].source }}</p>
       </div>

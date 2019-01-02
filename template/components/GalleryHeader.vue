@@ -8,7 +8,7 @@
           </a>
         </div> <!-- .c -->
         <div class="sml-c6 med-c4">
-          <div class="flex-row sml-push-y-half">
+          <div class="flex-grid sml-flex-row sml-push-y-half">
             <p class="text-meta text-right sml-hide lrg-show">
               <strong>Filter by state:</strong>
             </p>
@@ -20,7 +20,7 @@
                 </option>
               </select>
             </form>
-          </div> <!-- .flex-row -->
+          </div> <!-- .flex-grid -->
         </div> <!-- .c -->
       </div> <!-- .row -->
     </div> <!-- .wrapper -->
