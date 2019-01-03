@@ -4,7 +4,7 @@
     <p class="sml-push-y2 med-push-y3">
       Select your state below to print out the letter.
     </p>
-    <div class="flex-row sml-flex-col med-flex-row sml-push-y3">
+    <div class="flex-grid sml-flex-col med-flex-row sml-push-y3">
       <select v-model="selectedState" class="sml-flex-2">
         <option :value="null">Select your state</option>
         <option v-for="(name, abbr) in states" :key="abbr" :value="abbr">
@@ -16,7 +16,7 @@
               @click.prevent="printLetter()">
         Print the Letter
       </button>
-    </div> <!-- .flex-row -->
+    </div> <!-- .flex-grid -->
   </div>
 </template>
 

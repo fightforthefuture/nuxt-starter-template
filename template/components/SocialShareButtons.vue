@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-row text-center">
+  <div class="flex-grid sml-flex-row text-center">
     <ShareButton
       network="twitter"
       :url="url"
@@ -12,7 +12,7 @@
       :should-display-icon="false"
       class="btn-sml btn-block"
       @click.native="$trackClick('facebook_share_button')" />
-  </div> <!-- .flex-row -->
+  </div> <!-- .flex-grid -->
 </template>
 
 <script>

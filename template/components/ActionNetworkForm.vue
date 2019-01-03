@@ -39,17 +39,17 @@
     <form @submit.prevent="submitForm()" v-if="!hasSigned"
           class="sml-push-y2 med-push-y3">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
-      <div class="flex-row">
+      <div class="flex-grid sml-flex-row">
         <input v-model="name" type="text" placeholder="Name*" required>
         <input v-model="email" type="email" placeholder="Email*" required>
-      </div> <!-- .flex-row -->
-      <div class="flex-row sml-push-y2">
+      </div> <!-- .flex-grid -->
+      <div class="flex-grid sml-flex-row sml-push-y1">
         <input v-model="address" type="text" placeholder="Address"
                class="sml-flex-4">
         <input v-model="zipCode" type="tel" placeholder="ZIP Code">
-      </div> <!-- .flex-row -->
+      </div> <!-- .flex-grid -->
 
-      <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
+      <button class="btn btn-block sml-push-y1" :disabled="isSending">
         <span v-if="isSending">
           Sending...
         </span>
